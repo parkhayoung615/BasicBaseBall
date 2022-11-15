@@ -1,0 +1,284 @@
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+.two {
+    background: linear-gradient(to top, #002063 0%, #fff 100%);
+    font-size: 12px;
+}
+
+.two,
+button,
+input {
+    font-weight: 700;
+    letter-spacing: 1.4px;
+}
+
+.background {
+    display: flex;
+    min-height: 100vh;
+}
+
+.container {
+    flex: 0 1 700px;
+    margin: auto;
+    padding: 10px;
+}
+
+.screen {
+    position: relative;
+    background: #3e3e3e;
+    border-radius: 15px;
+}
+
+.screen:after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 20px;
+    right: 20px;
+    bottom: 0;
+    border-radius: 15px;
+    box-shadow: 0px 0px 10px 3px rgb(0, 0, 0);
+    z-index: -1;
+}
+
+.screen-header {
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    background: #4d4d4f;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+
+.screen-header-left {
+    margin-right: auto;
+}
+
+.screen-header-button {
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    margin-right: 3px;
+    border-radius: 8px;
+    background: white;
+}
+
+.screen-header-button.close {
+    background: #ed1c6f;
+}
+
+.screen-header-button.maximize {
+    background: #e8e925;
+}
+
+.screen-header-button.minimize {
+    background: #74c54f;
+}
+
+.screen-header-right {
+    display: flex;
+}
+
+.screen-header-ellipsis {
+    width: 3px;
+    height: 3px;
+    margin-left: 2px;
+    border-radius: 8px;
+    background: #999;
+}
+
+.screen-body {
+    display: flex;
+}
+
+.screen-body-item {
+    flex: 1;
+    padding: 50px;
+}
+
+.screen-body-item.left {
+    display: flex;
+    flex-direction: column;
+}
+
+.app-title {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.app-title span {
+    color: white;
+    font-size: 24px;
+}
+
+.app-title:after {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    width: 25px;
+    height: 4px;
+    background: #ea1d6f;
+}
+
+.app-contact {
+    margin-top: auto;
+    font-size: 8px;
+    color: #888;
+}
+
+.app-form-group {
+    margin-bottom: 15px;
+}
+
+.app-form-group.message {
+    margin-top: 40px;
+}
+
+.app-form-group.buttons {
+    margin-bottom: 0;
+    text-align: right;
+}
+
+.app-form-control {
+    width: 100%;
+    padding: 10px 0;
+    background: none;
+    border: none;
+    border-bottom: 1px solid #666;
+    color: #ddd;
+    font-size: 14px;
+    text-transform: uppercase;
+    outline: none;
+    transition: border-color .2s;
+}
+
+.app-form-control::placeholder {
+    color: #666;
+}
+
+.app-form-control:focus {
+    border-bottom-color: #ddd;
+}
+
+.app-form-button {
+    background: none;
+    border: none;
+    color: #ea1d6f;
+    font-size: 14px;
+    cursor: pointer;
+    outline: none;
+}
+
+.app-form-button:hover {
+    color: #b9134f;
+}
+
+.txt {
+    text-align: center;
+}
+
+.txt .sub-tit {
+    font-family: 'Noto Bs';
+    font-size: 35px;
+    color: #002063;
+}
+
+.context {
+    font-family: 'Noto Bb';
+    font-size: 60px;
+    text-align: center;
+    line-height: 1.3;
+}
+
+
+/* section why */ 
+
+.why {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-color: #002063;
+}
+
+.why-wrap {
+    width: 50%;
+    height: 100%;
+    margin: 0 auto;
+}
+
+.whytxt {
+    color: white;
+    font-family: 'Noto Bb';
+    font-size: 150px;
+}
+
+.why-wrap .txt1 {
+    z-index: 3;
+    top: 18%;
+    left: 30%;
+    font-size: 200px;
+}
+
+.why-wrap .txt2 {
+    z-index: 20;
+    text-align: center;
+    top: 40%;
+    left: 30%;
+}
+
+.why-wrap .txt3 {
+    z-index: 5;
+    font-size: 200px;
+    top: 50%;
+    left: 55%;
+    -webkit-text-stroke: 5px white;
+    color: rgba(0, 0, 0, 0);
+}
+
+.why-img {
+    z-index: 15;
+    width: 280px;
+    margin: 0 auto;
+    top: 30%;
+    left: 40%;
+    transform: scaleX(-1);
+}
+
+.whybox {
+    z-index: 10;
+    width: 750px;
+    height: 180px;
+    border: 7px solid white;
+    top: 43%;
+    left: 28%;
+    background-color: #002063;
+}
+
+.whycontext {
+    position: absolute;
+}
+
+.answer-txt {
+    color: rgb(202, 202, 202);
+    margin-left: 5%;
+    font-size: 70px;
+    line-height: 1.2;
+    font-family: 'Noto Bb';
+}
+
+.answer-txt span {
+    font-family: 'Noto Bb';
+    font-size: 70px;
+}
+
+.red {
+    color: rgb(179, 0, 0);
+}

@@ -1,0 +1,508 @@
+.wrapper {
+    position: relative;
+}
+
+
+/* 메인 영역 */
+/* 첫 번째 영역 */
+
+.half {
+    background-image: linear-gradient(to right, #E8E8E8 55%, #D9D9D9 45%);
+    width: 100%;
+    height: 100%;
+}
+
+#visual,
+.slide-item {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.visual-tit .tit {
+    z-index: 20;
+    position: absolute;
+    bottom: 15%;
+    left: 16%;
+}
+
+.visual-tit .tit,
+.visual-tit .sub-tit {
+    font-family: 'Noto Bb';
+    font-size: 130px;
+    color: #000;
+    line-height: 42px;
+}
+
+.visual-tit .sub-tit {
+    font-size: 30px;
+    padding-left: 8px;
+}
+
+.ball {
+    left: 42%;
+    top: 30%;
+    position: absolute;
+    width: 440px;
+    z-index: 400;
+}
+
+.bat {
+    left: 20%;
+    top: 31%;
+    transform: rotate(16deg);
+    position: absolute;
+    width: 700px;
+    z-index: 500;
+    filter: grayscale(20%);
+}
+
+.circle1 {
+    z-index: 300;
+    position: absolute;
+    border: 35px solid #D12B2B;
+    border-radius: 100%;
+    width: 400px;
+    height: 400px;
+    top: 20%;
+    left: 35%;
+}
+
+.circle2 {
+    position: absolute;
+    background-color: #DA5050;
+    opacity: .8;
+    width: 300px;
+    height: 300px;
+    border-radius: 100%;
+    top: 47%;
+    left: 30.5%;
+}
+
+/* 슬라이드 텍스트 박스 */
+
+.slide-txtbox {
+    top: 29%;
+    right: 29%;
+    z-index: 800;
+    position: absolute;
+    width: 200px;
+    height: 130px;
+    background-color: rgba(0, 32, 99, 0.5);
+    border-radius: 15px;
+}
+
+.slide-txtbox2 {
+    top: 26%;
+    right: 25%;
+    z-index: 800;
+    position: absolute;
+    width: 200px;
+    height: 130px;
+    background-color: rgba(155, 0, 0, 0.5);
+    border-radius: 15px;
+}
+
+.slide-txtbox3 {
+    top: 57%;
+    right: 33%;
+    z-index: 800;
+    position: absolute;
+    width: 200px;
+    height: 130px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 15px;
+}
+
+.box-wrap {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.box-txt {
+    padding: 40px;
+}
+
+.box-enter {
+    position: absolute;
+    border-top-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    right: 0;
+    bottom: 0;
+    padding: 3px;
+    width: 100px;
+    height: 30px;
+    text-align: center;
+    background-color: #000;
+    border: 1px solid #fff;
+}
+
+.box-txt,
+.box-enter {
+    font-family: 'Noto L';
+    color: #E9E9E9;
+}
+
+.box-enter i {
+    color: #E9E9E9;
+}
+
+/* 슬라이드 이벤트 */
+.visual-wrap {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.visual-window {
+    display: flex;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: -3%;
+    z-index: 10;
+    animation: slide 21s infinite;
+    width: 300%;
+    height: 100%;
+}
+
+@keyframes slide {
+    0% {
+        margin-left: 0;
+    }
+
+    20% {
+        margin-left: 0;
+    }
+
+    33% {
+        margin-left: -100%;
+    }
+
+    50% {
+        margin-left: -100%;
+    }
+
+    66% {
+        margin-left: -200%;
+    }
+
+    80% {
+        margin-left: -200%;
+    }
+
+    99% {
+        margin-left: 0;
+    }
+
+    100% {
+        margin-left: 0;
+    }
+}
+
+.player {
+    position: absolute;
+    top: 20%;
+    left: 40%;
+    width: 500px;
+    object-fit: cover;
+    z-index: 40;
+}
+
+/* 글 .. 러브 .. 너무 로맨틱한 듯 진짜로 ... ㅠㅠ 러브 ~ 사랑해요*/
+.glove {
+    position: absolute;
+    top: 43%;
+    left: 50%;
+    width: 400px;
+    z-index: 400;
+}
+
+.squ1 {
+    position: absolute;
+    top: 23%;
+    left: 40%;
+    height: 300px;
+    width: 500px;
+    background-color: #002063;
+}
+
+.squ2 {
+    position: absolute;
+    z-index: -1;
+    top: 33%;
+    left: 34%;
+    height: 400px;
+    width: 280px;
+    background-color: #0c3181;
+    opacity: .8;
+}
+
+.bb2 {
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    width: 550px;
+    z-index: 5;
+    border-radius: 10px;
+}
+
+.bb {
+    border-radius: 10px;
+    position: absolute;
+    z-index: 10;
+    top: 33%;
+    left: 34%;
+    width: 400px;
+    z-index: 7;
+    opacity: .9;
+}
+
+.tri1 {
+    position: absolute;
+    z-index: -1;
+    top: 40%;
+    left: 42%;
+    width: 400px;
+    width: 0px;
+    height: 0px;
+    transform: rotate(-20deg);
+    border-bottom: 360px solid #c0c0c0d8;
+    border-left: 180px solid transparent;
+    border-right: 480px solid transparent;
+}
+
+.tri2 {
+    position: absolute;
+    z-index: 6;
+    top: 20%;
+    left: 32%;
+    width: 400px;
+    width: 0px;
+    height: 0px;
+    transform: rotate(20deg);
+    border-bottom: 360px solid #8f8f8f;
+    border-left: 180px solid transparent;
+    border-right: 480px solid transparent;
+}
+
+/* 인트로듀스마이셆마이네임이즈펭수 ~ */
+.intro {
+    position: absolute;
+    bottom: 8%;
+    right: 12%;
+}
+
+.intro hr {
+    border: 2px solid #000;
+    width: 250px;
+}
+
+.intro p {
+    font-family: 'Noto T';
+    color: #535353;
+    padding-left: 10px;
+}
+
+.intro .devel {
+    padding-top: 8px;
+}
+
+#myVideo {
+    overflow: hidden;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+    height: 60%;
+    object-fit: cover;
+    z-index: 3;
+    filter: brightness(30%);
+}
+
+
+/* section two */
+.two {
+    position: relative;
+}
+
+.video-wrap .tit {
+    z-index: 9999;
+    position: absolute;
+    font-family: 'Noto Bb';
+    font-size: 100px;
+    color: rgb(211, 211, 211);
+    line-height: 100px;
+    width: 100%;
+    filter: blur(0.5px) opacity(.9);
+}
+
+.video-wrap .tit span {
+    position: relative;
+    font-size: 100px;
+    color: white;
+    font-family: 'Noto Bb';
+}
+
+.video-wrap .tit span::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 50px;
+    position: absolute;
+    left: 0;
+    bottom: 20px;
+    background: rgba(179, 0, 0, 0.5);
+}
+
+.video-wrap .tit:hover span::after {
+    width: 100%;
+    transition: width .3s;
+}
+
+
+.balloon {
+    position: absolute;
+    bottom: 10%;
+    right: 5%;
+    z-index: 20;
+    width: 410px;
+    height: 50px;
+    background: rgb(0, 32, 99);
+    color: #FFF;
+    border-radius: 10px;
+    padding-top: 5px;
+    font-weight: 600;
+    padding-left: 20px;
+}
+
+.balloon a {
+    color: white;
+}
+
+.balloon:after {
+    border-top: 0px solid transparent;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 10px solid rgb(0, 32, 99);
+    content: "";
+    position: absolute;
+    top: -10px;
+    right: 80px;
+}
+
+/* section three */
+
+.three {
+    position: relative;
+    background-color: rgb(9, 15, 24);
+}
+
+.three-wrap .title {
+    position: absolute;
+    top: -15%;
+    left: 20%;
+    z-index: 22;
+}
+
+.three-wrap .title .sub-tit {
+    font-size: 28px;
+    font-family: 'Noto Bs';
+    color: #3182f6;
+    margin-bottom: 15px;
+}
+
+.three-wrap .title .tit {
+    font-size: 50px;
+    font-family: 'Noto M';
+    color: #fff;
+    line-height: 1.2;
+}
+
+:root {
+    --background-dark: #2d3548;
+    --text-light: rgba(255, 255, 255, 0.6);
+    --text-lighter: rgba(255, 255, 255, 0.9);
+    --spacing-s: 8px;
+    --spacing-m: 16px;
+    --spacing-l: 24px;
+    --spacing-xl: 32px;
+    --spacing-xxl: 64px;
+}
+
+.hero-section {
+    align-items: flex-start;
+    display: flex;
+    height: 100%;
+    justify-content: center;
+}
+
+.card-grid {
+    display: flex;
+    margin-top: 8%;
+}
+
+.card {
+    list-style: none;
+    position: relative;
+    width: 230px;
+    height: 300px;
+    margin: 35px;
+}
+
+.card:before {
+    content: '';
+    display: block;
+    height: 100%;
+    width: 100%;
+}
+
+.card__background {
+    background-size: cover;
+    background-position: center;
+    border-radius: var(--spacing-l);
+    bottom: 0;
+    filter: brightness(0.75) saturate(1.2) contrast(0.85);
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    transform-origin: center;
+    transform: scale(1) translateZ(0);
+    transition:
+        filter 200ms linear,
+        transform 200ms linear;
+}
+
+.card:hover .card__background {
+    transform: scale(1.05) translateZ(0);
+}
+
+.card-grid:hover>.card:not(:hover) .card__background {
+    filter: brightness(0.5) saturate(0) contrast(1.2) blur(10px);
+}
+
+.card__content {
+    left: 0;
+    padding: var(--spacing-l);
+    position: absolute;
+    top: 0;
+}
+
+.card__category {
+    color: var(--text-light);
+    font-size: 0.9rem;
+    margin-bottom: var(--spacing-s);
+    text-transform: uppercase;
+}
+
+.card__heading {
+    color: var(--text-lighter);
+    font-size: 20px;
+    text-shadow: 2px 2px 20px rgba(0, 0, 0, 0.2);
+    line-height: 1.4;
+}
