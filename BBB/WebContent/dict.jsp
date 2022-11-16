@@ -65,7 +65,7 @@
                             <div class="tit">야구 용어 사전</div>
                             <div class="sub-tit">어렵기만 한 야구 용어를 손쉽게 알아보세요!</div>
                         </div>
-                        <div class="lets"><a href="./add.html" class="lets-a">&#128587; 제가 알고 있는 용어가 없어요 ! (용어 추가 바로가기)
+                        <div class="lets"><a href="./add.jsp" class="lets-a">&#128587; 제가 알고 있는 용어가 없어요 ! (용어 추가 바로가기)
                                 ></a></div>
                         <table class="type10">
                             <thead>

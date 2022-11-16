@@ -51,13 +51,13 @@
                     <form action="#">
                         <div class="login-wrap">
                             <ul class="login-list">
-                                <li class="logo"><a href="./index.html">B.B.B</a></li>
+                                <li class="logo"><a href="./index.jsp">B.B.B</a></li>
                                 <li class="id"><input type="text" name="userid" id="userid" placeholder="ID"></li>
                                 <li class="pwd"><input type="password" name="userpwd" id="userpwd"
                                         placeholder="PASSWORD"></li>
                                 <li class="submit"><input type="submit" value="LOG IN"></li>
                                 <li class="forget"><a href="#" style="display: none;">Lost Your Password?</a></li>
-                                <li class="signup"><a href="./join.html">아직도 회원이 아닌가요?</a></li>
+                                <li class="signup"><a href="./join.jsp">아직도 회원이 아닌가요?</a></li>
                             </ul>
                             <img id="introImg" border="0">
                         </div>

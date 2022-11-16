@@ -32,7 +32,7 @@
                     <div class="left-content">
                         <ul class="action-list">
                             <li class="item">
-                            <li class="logo"><a href="./index.html">B.B.B</a></li>
+                            <li class="logo"><a href="./index.jsp">B.B.B</a></li>
                             </li>
                             <li class="item">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
@@ -41,7 +41,7 @@
                                     <polygon
                                         points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
                                 </svg>
-                                <span><a href="./about.html">ABOUT B.B.B</a></span>
+                                <span><a href="./about.jsp">ABOUT B.B.B</a></span>
                             </li>
                             <li class="item">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none"
@@ -50,7 +50,7 @@
                                     <rect width="18" height="18" x="3" y="4" rx="2" ry="2" />
                                     <path d="M16 2v4M8 2v4m-5 4h18" />
                                 </svg>
-                                <span><a href="./dict.html">Dictionary</a></span>
+                                <span><a href="./dict.jsp">Dictionary</a></span>
                             </li>
                         </ul>
 
@@ -62,7 +62,7 @@
                                     stroke-linejoin="round" class="feather feather-zap">
                                     <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2" />
                                 </svg>
-                                <span>로그아웃</span>
+                                <span><a href="#">로그아웃</a></span>
                             </li>
                         </ul>
                     </div>
@@ -107,7 +107,7 @@
                 <!-- right side bar -->
                 <div class="right-bar">
                     <div class="top-part">
-                        <a href="./index.html"><i class="fa-solid fa-house"></i></a>
+                        <a href="./index.jsp"><i class="fa-solid fa-house"></i></a>
                     </div>
                     <div class="header">승인 대기</div>
                     <div class="right-content">

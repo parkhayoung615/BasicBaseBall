@@ -73,48 +73,48 @@
                                     <li>
                                         <div class="sub-tit">포지션별 검색</div>
                                         <ul>
-                                            <li><a href="./dict.html" class="dict-button">투수 (P)</a></li>
-                                            <li><a href="./dict.html" class="dict-button">포수 (C)</a></li>
-                                            <li><a href="./dict.html" class="dict-button">1루수 (1B)</a></li>
-                                            <li><a href="./dict.html" class="dict-button">2루수 (2B)</a></li>
-                                            <li><a href="./dict.html" class="dict-button">3루수 (3B)</a></li>
+                                            <li><a href="./dict.jsp" class="dict-button">투수 (P)</a></li>
+                                            <li><a href="./dict.jsp" class="dict-button">포수 (C)</a></li>
+                                            <li><a href="./dict.jsp" class="dict-button">1루수 (1B)</a></li>
+                                            <li><a href="./dict.jsp" class="dict-button">2루수 (2B)</a></li>
+                                            <li><a href="./dict.jsp" class="dict-button">3루수 (3B)</a></li>
                                         </ul>
                                         <ul>
-                                            <li><a href="./dict.html" class="dict-button">유격수 (SS)</a></li>
-                                            <li><a href="./dict.html" class="dict-button">좌익수 (LF)</a></li>
-                                            <li><a href="./dict.html" class="dict-button">중견수 (CF)</a></li>
-                                            <li><a href="./dict.html" class="dict-button">우익수 (RF)</a></li>
-                                            <li><a href="./dict.html" class="dict-button">지명타자 (DH)</a></li>
+                                            <li><a href="./dict.jsp" class="dict-button">유격수 (SS)</a></li>
+                                            <li><a href="./dict.jsp" class="dict-button">좌익수 (LF)</a></li>
+                                            <li><a href="./dict.jsp" class="dict-button">중견수 (CF)</a></li>
+                                            <li><a href="./dict.jsp" class="dict-button">우익수 (RF)</a></li>
+                                            <li><a href="./dict.jsp" class="dict-button">지명타자 (DH)</a></li>
                                         </ul>
                                         <ul>
-                                            <li><a href="./dict.html" class="dict-button">대타 (PH)</a></li>
-                                            <li><a href="./dict.html" class="dict-button">대주자 (PR)</a></li>
+                                            <li><a href="./dict.jsp" class="dict-button">대타 (PH)</a></li>
+                                            <li><a href="./dict.jsp" class="dict-button">대주자 (PR)</a></li>
                                         </ul>
                                     </li>
                                     <hr>
                                     <li>
                                         <div class="sub-tit">용어 검색</div>
                                         <ul>
-                                            <li><a href="./dict.html" class="dict-button">공식</a></li>
-                                            <li><a href="./dict.html" class="dict-button">비공식</a></li>
+                                            <li><a href="./dict.jsp" class="dict-button">공식</a></li>
+                                            <li><a href="./dict.jsp" class="dict-button">비공식</a></li>
                                         </ul>
                                     </li>
                                     <hr>
                                     <li>
                                         <div class="sub-tit">KBO 구단 검색</div>
                                         <ul>
-                                            <li><a href="./dict.html" class="dict-button">SSG Landers</a></li>
-                                            <li><a href="./dict.html" class="dict-button">KIWOOM Heroes</a></li>
-                                            <li><a href="./dict.html" class="dict-button">KIA Tigers</a></li>
-                                            <li><a href="./dict.html" class="dict-button">LOTTE Giants</a></li>
-                                            <li><a href="./dict.html" class="dict-button">DOOSAN Bears</a></li>
+                                            <li><a href="./dict.jsp" class="dict-button">SSG Landers</a></li>
+                                            <li><a href="./dict.jsp" class="dict-button">KIWOOM Heroes</a></li>
+                                            <li><a href="./dict.jsp" class="dict-button">KIA Tigers</a></li>
+                                            <li><a href="./dict.jsp" class="dict-button">LOTTE Giants</a></li>
+                                            <li><a href="./dict.jsp" class="dict-button">DOOSAN Bears</a></li>
                                         </ul>
                                         <ul>
-                                            <li><a href="./dict.html" class="dict-button">SAMSUNG Lions</a></li>
-                                            <li><a href="./dict.html" class="dict-button">LG Twins</a></li>
-                                            <li><a href="./dict.html" class="dict-button">HANWHA Eagles</a></li>
-                                            <li><a href="./dict.html" class="dict-button">NC Dinos</a></li>
-                                            <li><a href="./dict.html" class="dict-button">KT Wiz</a></li>
+                                            <li><a href="./dict.jsp" class="dict-button">SAMSUNG Lions</a></li>
+                                            <li><a href="./dict.jsp" class="dict-button">LG Twins</a></li>
+                                            <li><a href="./dict.jsp" class="dict-button">HANWHA Eagles</a></li>
+                                            <li><a href="./dict.jsp" class="dict-button">NC Dinos</a></li>
+                                            <li><a href="./dict.jsp" class="dict-button">KT Wiz</a></li>
                                         </ul>
                                     </li>
                                 </ul>

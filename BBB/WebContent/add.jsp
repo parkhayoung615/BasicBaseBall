@@ -52,7 +52,7 @@
                     <div class="title">
                         <div class="tit">ADD</div>
                     </div>
-                    <form>
+                    <form action="#" method="post">
                         <select multiple >
                             <option selected>투수 (P)</option>
                             <option selected>포수 (C)</option>

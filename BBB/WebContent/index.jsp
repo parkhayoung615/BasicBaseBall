@@ -76,8 +76,8 @@
                                         <div class="slide-txtbox">
                                             <div class="box-wrap">
                                                 <div class="box-txt">About<br>Basic Base Ball ...</div>
-                                                <a href="./about.html">
-                                                    <div class="box-enter">ENTER
+                                                <a href="./about.jsp">
+                                                    <div class="box-enter">ABOUT B.B.B
                                                         <i class="fa-sharp fa-solid fa-chevron-right"></i>
                                                     </div>
                                                 </a>
@@ -92,9 +92,9 @@
                                     <li class="slide-item">
                                         <div class="slide-txtbox2">
                                             <div class="box-wrap">
-                                                <div class="box-txt">B.B.B<br>Dictionary !</div>
-                                                <a href="./dict.html">
-                                                    <div class="box-enter">ENTER<i
+                                                <div class="box-txt">B.B.B<br>사전 !</div>
+                                                <a href="./dict.jsp">
+                                                    <div class="box-enter">Dictionary<i
                                                             class="fa-sharp fa-solid fa-chevron-right"></i></div>
                                                 </a>
                                             </div>
@@ -110,7 +110,7 @@
                                         <div class="slide-txtbox3">
                                             <div class="box-wrap">
                                                 <div class="box-txt">아직도 회원이<br>아닌가요?</div>
-                                                <a href="./join.html">
+                                                <a href="./join.jsp">
                                                     <div class="box-enter">SIGN UP<i
                                                             class="fa-sharp fa-solid fa-chevron-right"></i></div>
                                                 </a>
