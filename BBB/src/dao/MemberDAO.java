@@ -43,7 +43,7 @@ public class MemberDAO {
 		int result = 0;
 		Connection conn = null;
 		PreparedStatement pstmt = null;
-		String sql = "INSERT INTO member VALUES(?,?,?,?)";
+		String sql = "INSERT INTO member VALUES(?,?,?,?,'F')";
 		
 		try {
 			conn = JdbcUtil.getConnection();

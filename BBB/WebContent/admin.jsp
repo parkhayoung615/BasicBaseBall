@@ -1,3 +1,4 @@
+<%@page import="vo.MemberVO"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -16,6 +17,15 @@
     <link rel="stylesheet" href="./css/mypage.css">
     <link rel="stylesheet" href="./css/admin.css">
 </head>
+<%
+MemberVO vo = (MemberVO) session.getAttribute("loginOK");
+String id = (String)session.getAttribute("admin");
+System.out.println(vo.getUserId());
+if (vo == null) {
+	out.println("<script>alert('로그인을 진행 해주세요!');</script>");
+	out.print("<script> location.href = 'login.jsp' </script>");
+}
+%>
 
 <body onload="showImage()" style="-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none">
     <div class="wrapper">
@@ -50,7 +60,7 @@
                                     <rect width="18" height="18" x="3" y="4" rx="2" ry="2" />
                                     <path d="M16 2v4M8 2v4m-5 4h18" />
                                 </svg>
-                                <span><a href="./dict.jsp">Dictionary</a></span>
+                                <span><a href="/listDictionary?sel=all">Dictionary</a></span>
                             </li>
                         </ul>
 
@@ -67,40 +77,32 @@
                         </ul>
                     </div>
                 </div>
-                <div class="page-content">
+                 <div class="page-content">
                     <div class="header">Admin Page</div>
                     <div class="tasks-wrapper">
-                        <h1 class="task-header">CONTACT ME</h1>
-                        <table class="rwd-table">
-                            <tr>
-                                <th>Num</th>
-                                <th>Name</th>
-                                <th>Email</th>
-                                <th>Contact Number</th>
-                                <th>Message</th>
-                            </tr>
-                            <tr>
-                                <td data-th="num Title">1</td>
-                                <td data-th="Name">박하영</td>
-                                <td data-th="Email">parkhayoung615@gmail.com</td>
-                                <td data-th="Contact Number">01031236181</td>
-                                <td data-th="Message">안뇽하영아사실난널너무좋아하는듰그냥그렇다고알아만두라고</td>
-                            </tr>
-                            <tr>
-                                <td data-th="num Title">2</td>
-                                <td data-th="Name">하뇽뇽</td>
-                                <td data-th="Email">parkhayoung0615@gmail.com</td>
-                                <td data-th="Contact Number">01012346181</td>
-                                <td data-th="Message">안뇽안뇽</td>
-                            </tr>
-                            <tr>
-                                <td data-th="num Title">3</td>
-                                <td data-th="Name">녕냥냥</td>
-                                <td data-th="Email">ys2110103@y-y.hs.kr</td>
-                                <td data-th="Contact Number">0317451267</td>
-                                <td data-th="Message">너좋아한게죄라면죈데그게죄라고할수잇어씨 팔</td>
-                            </tr>
-                        </table>
+                        <div class="header">승인 대기</div>
+                        <div class="right-content">
+                            <div class="task-box yellow">
+                                <div class="description-task">
+                                    <div class="time">승인대기중</div>
+                                    <div class="task-name">중견수</div>
+                                </div>
+                                <div class="more-button"></div>
+                                <div class="members">
+                                    <div class="txt">내용 : 외야수 중 가운데 필드를 수비하는 사람</div>
+                                </div>
+                            </div>
+                            <div class="task-box blue">
+                                <div class="description-task">
+                                    <div class="time">승인대기중</div>
+                                    <div class="task-name">좌익수</div>
+                                </div>
+                                <div class="more-button"></div>
+                                <div class="members">
+                                    <div class="txt">내용 : 외야수 중 좌측 필드를 수비하는 사람</div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
@@ -109,29 +111,10 @@
                     <div class="top-part">
                         <a href="./index.jsp"><i class="fa-solid fa-house"></i></a>
                     </div>
-                    <div class="header">승인 대기</div>
-                    <div class="right-content">
-                        <div class="task-box yellow">
-                            <div class="description-task">
-                                <div class="time">승인대기중</div>
-                                <div class="task-name">중견수</div>
-                            </div>
-                            <div class="more-button"></div>
-                            <div class="members">
-                                <div class="txt">내용 : 외야수 중 가운데 필드를 수비하는 사람</div>
-                            </div>
-                        </div>
-                        <div class="task-box blue">
-                            <div class="description-task">
-                                <div class="time">승인대기중</div>
-                                <div class="task-name">좌익수</div>
-                            </div>
-                            <div class="more-button"></div>
-                            <div class="members">
-                                <div class="txt">내용 : 외야수 중 좌측 필드를 수비하는 사람</div>
-                            </div>
-                        </div>
-                    </div>
+                   <div class="right-content">
+                        <img src="./image/haha.png" alt="하뇽뇽" width="230px">
+                        <h2 style="margin-top: 30px; margin-left: 30px;">박하영의 JSP 개인 프로젝트 !!</h2>
+                   </div>
                 </div>
             </div>
         </section>

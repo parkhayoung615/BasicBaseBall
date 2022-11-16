@@ -24,14 +24,22 @@ table.type10 tbody th {
     padding: 10px;
 }
 
-table.type10 td {
-    width: 350px;
-    padding: 10px;
-    vertical-align: top;
+table.type10 td:first-child, table.type10 td:nth-child(2) {
+    width: 100px;
 }
 
-table.type10 .even {
-    background: rgba(159, 189, 255, 0.522)
+table.type10 td:nth-child(3) {
+    width: 200px;
+}
+
+table.type10 td:nth-child(4) {
+    width: 700px;
+}
+
+table.type10 td {
+    width: 300px;
+    padding: 10px;
+    vertical-align: top;
 }
 
 .title {

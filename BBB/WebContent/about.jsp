@@ -62,7 +62,7 @@
                     </div>
                 </div>
             </section>
-
+<!-- 
             <section class="section two">
                 <div class="background">
                     <div class="container">
@@ -113,6 +113,7 @@
                 </div>
 
             </section>
+             -->
 
             <!-- footer 영역 -->
             <div class="section fp-auto-height">
@@ -140,9 +141,9 @@
     <!-- 풀페이지 웹사이트에 필요한 js 코드 -->
     <script type="text/javascript">
         var myFullpage = new fullpage('#fullpage', {
-            anchors: ['firstPage', 'secondPage', '3rdPage', '4thpage', 'lastPage'],
+            anchors: ['firstPage', 'secondPage', '3rdPage', 'lastPage'],
             lazyLoad: true,
-            navigationTooltips: ['', '', '', '', ''],
+            navigationTooltips: ['', '', '', ''],
             showActiveTooltip: true
         });
 

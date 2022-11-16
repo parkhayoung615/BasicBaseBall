@@ -30,7 +30,6 @@
                     <!-- 색상 .. 떄문에 half 써줌 -->
                     <div class="half">
                         <div id="visual">
-
                             <div data-aos="fade-up">
                                 <div class="visual-tit">
                                     <div class="tit">BASIC.<br>
@@ -61,7 +60,7 @@
                                         <div class="slide-txtbox2">
                                             <div class="box-wrap">
                                                 <div class="box-txt">B.B.B<br>야구 용어 사전 !</div>
-                                                <a href="./dict.jsp">
+                                                <a href="/listDictionary?sel=all">
                                                     <div class="box-enter">ENTER<i
                                                             class="fa-sharp fa-solid fa-chevron-right"></i></div>
                                                 </a>
@@ -134,7 +133,7 @@
                                         <h3 class="card__heading">가입을 통해<br>다양한 서비스를<br>만나보세요!</h3>
                                     </div>
                                 </a>
-                                <a class="card" href="./dict.jsp">
+                                <a class="card" href="/listDictionary?sel=all">
                                     <div class="card__background"
                                     style="background-image: url(./image/bb3.jpg); ">
                                 </div>

@@ -26,32 +26,37 @@
 		<!-- header 영역 -->
 		<%@ include file="./view/header.jsp"%>
 
+<%
+	if(vo == null) {
+		out.println("<script>alert('로그인을 진행 해주세요!');</script>");
+		out.print("<script> location.href = 'index.jsp' </script>");
+	}
+%>
 
 		<!-- 풀페이지 영역 -->
 		<div id="fullpage">
-			<!-- 메인 영역 -->
 			<!-- 첫 번째 영역 -->
 			<section class="section add">
 				<div class="add-wrap">
 					<div class="title">
 						<div class="tit">ADD</div>
 					</div>
-					<form action="#" method="post">
-						<select multiple>
-							<option selected style="color: whtie;">투수 (P)</option>
-							<option selected>포수 (C)</option>
-							<option>1루수 (1B)</option>
-							<option>2루수 (2B)</option>
-							<option>3루수 (3B)</option>
-							<option>유격수 (SS)</option>
-							<option>좌익수 (LF)</option>
-							<option>중견수 (CF)</option>
-							<option>우익수 (RF)</option>
-							<option>지명타자 (DH)</option>
-							<option>대타 (PH)</option>
-							<option>대주자 (PR)</option>
-							<option selected>공식 용어</option>
-							<option>비공식 용어</option>
+					<form action="/add" method="post">
+						<select multiple name="add-select">
+							<option selected value="bbp">투수 (P)</option>
+							<option selected value="bbc">포수 (C)</option>
+							<option value="bb1b">1루수 (1B)</option>
+							<option value="bb2b">2루수 (2B)</option>
+							<option value="bb3b">3루수 (3B)</option>
+							<option value="bbss">유격수 (SS)</option>
+							<option value="bblf">좌익수 (LF)</option>
+							<option value="bbcf">중견수 (CF)</option>
+							<option value="bbrf">우익수 (RF)</option>
+							<option value="bbdh">지명타자 (DH)</option>
+							<option value="bbph">대타 (PH)</option>
+							<option value="bbpr">대주자 (PR)</option>
+							<option selected value="bbd">공식 용어</option>
+							<option value="bbi">비공식 용어</option>
 						</select>
 
 						<!-- dribbble -->
@@ -59,7 +64,7 @@
 							href="https://dribbble.com/shots/5112850-Multiple-select-animation-field"
 							target="_blank"><img
 							src="https://cdn.dribbble.com/assets/dribbble-ball-1col-dnld-e29e0436f93d2f9c430fde5f3da66f94493fdca66351408ab0f96e2ec518ab17.png"
-							alt=""></a> <input name="email" type="text"
+							alt=""></a> <input name="title" type="text"
 							class="feedback-input" placeholder="TITLE" />
 						<textarea name="text" class="feedback-input" placeholder="COMMENT"></textarea>
 						<input type="submit" value="SUBMIT" />

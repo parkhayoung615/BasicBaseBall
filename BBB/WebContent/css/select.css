@@ -74,3 +74,34 @@
     color: white;
     background-color: #002063;
 }
+
+.cate-list .ssg:hover {
+    background-color: #CE0E2D;
+}
+.cate-list .doosan:hover {
+    background-color: #131230;
+}
+.cate-list .lotte:hover {
+    background-color: #002955;
+}
+.cate-list .hanwha:hover {
+    background-color: #FF6600;
+}
+.cate-list .lg:hover {
+    background-color: #C30452;
+}
+.cate-list .nc:hover {
+    background-color: #315288;
+}
+.cate-list .samsung:hover {
+    background-color: #074CA1;
+}
+.cate-list .kiwoom:hover {
+    background-color: #820024;
+}
+.cate-list .kia:hover {
+    background-color: #EA0029;
+}
+.cate-list .kt:hover {
+    background-color: #000;
+}

@@ -87,3 +87,25 @@
     font-family: 'Noto M';
     font-size: 30px;
 }
+
+
+.task-box {
+    width: 500px;
+    margin: 20px auto;
+}
+
+.task-name {
+    font-family: 'Noto Bs';
+    font-size: 17px;
+    color: #000000;
+}
+
+.members .txt {
+    width: 100%;
+    font-family: 'Noto R';
+    padding-bottom: 10px;
+}
+
+.description-task, .members .txt {
+    text-align: center;
+}

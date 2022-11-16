@@ -41,7 +41,7 @@ public class SessionLoginServlet extends HttpServlet {
 			
 			// MemberVO 객체 변수 생성 -> 세션에 속성 값으로 설정
 			HttpSession session = request.getSession();
-			session.setAttribute("loginOK", vo);
+			session.setAttribute("loginOK", vo);	
 			response.sendRedirect("index.jsp");
 		} else {
 			out.println("<script> alert('로그인에 실패하였습니다.'); history.back(); </script>");

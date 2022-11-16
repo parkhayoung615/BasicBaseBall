@@ -23,15 +23,13 @@ public class SessionLogoutServlet extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		response.setContentType("text/html; charset=UTF-8");
-
 		HttpSession session = request.getSession();
 		PrintWriter out = response.getWriter();
 
 		MemberVO vo = (MemberVO) session.getAttribute("loginOK");
-
+		
 		if (vo != null) {
 			session.removeAttribute("loginOK");
-			out.print("<script>alert('로그아웃 되었습니다.');</script>");
 			response.sendRedirect("/index.jsp");
 		}
 	}
