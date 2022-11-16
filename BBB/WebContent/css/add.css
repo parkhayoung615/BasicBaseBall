@@ -1,5 +1,5 @@
 * {
-    color: rgb(199, 199, 199);
+   color: #fff;
 }
 
 .header-list .log {
@@ -74,8 +74,6 @@ textarea {
 }
 
 
-
-
 .selectMultiple {
     width: 420px;
     position: relative;
@@ -131,7 +129,7 @@ textarea {
 }
 
 .selectMultiple>div span {
-    color: #777777;
+     color: white;
     display: block;
     position: absolute;
     left: 12px;
@@ -150,7 +148,7 @@ textarea {
     position: relative;
     padding: 0 24px 6px 8px;
     line-height: 28px;
-    color: #1E2330;
+   	color: #fff;
     display: inline-block;
     vertical-align: top;
     margin: 0 6px 0 0;
@@ -170,9 +168,10 @@ textarea {
     width: 100%;
     position: absolute;
     display: block;
-    background: rgba(0, 28, 151, 0.603);
+    background: #CC6666;
     z-index: -1;
     border-radius: 4px;
+   	color: #fff;
 }
 
 .selectMultiple>div a i {
@@ -437,4 +436,12 @@ body .dribbble:hover {
 body .dribbble img {
     display: block;
     height: 36px;
+}
+
+.add-wrap form select option {
+	color: #fff;
+}
+
+* {
+	color: #fff;
 }

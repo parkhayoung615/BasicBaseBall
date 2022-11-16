@@ -9,48 +9,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>회원가입</title>
 
-    <!-- fontawesome cdn, fullpage js, fullpage jquery 사용 -->
-    <script src="https://kit.fontawesome.com/8ca5eadfef.js" crossorigin="anonymous"></script>
-    <script src="./js/jquery-3.1.1.min.js"></script>
-    <script type="text/javascript" src="./lib/fullpage.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.js"></script>
-    <!--
-        css
-        - style.css = 기본 css (header, footer)
-        - login.css = login css
-        - join.css = join css
-        - main.css = index, abuout css
-        - sub.css = sub html css
-        - fullpage.min.css = 풀페이지 웹사이트에 필요한 라이브러리 css
-        - not.css = 404page css
-    -->
-    <link rel="stylesheet" href="./css/style.css">
+
     <link rel="stylesheet" href="./css/not.css">
-    <link rel="stylesheet" href="./lib/fullpage.min.css">
 </head>
 
 <body onload="showImage()" style="-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none">
     <div class="wrapper">
         <!-- header 영역 -->
        
-        <header>
-            <div class="header-wrap">
-                <ul class="header-list">
-                    <li>
-                        <ul class="left-header sub-menu">
-                            <li class="logo"><a href="./index.jsp">B.B.B</a></li>
-                            <li>PROJECT</li>
-                        </ul>
-                        <ul class="right-header sub-menu">
-                            <li><a href="./about.jsp">ABOUT B.B.B</a></li>
-                            <li><a href="./dict.jsp">Dictionary</a></li>
-                            <li class="log"><a href="./login.jsp">Log in</a></li>
-                            <li><a href="./select.jsp"><i class="fa-solid fa-magnifying-glass"></i></a></li>
-                        </ul>
-                    </li>
-                </ul>
-            </div>
-        </header>
+        <%@ include file="./view/header.jsp"%>
 
 
         <!-- 풀페이지 영역 -->
