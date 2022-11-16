@@ -119,50 +119,24 @@ ArrayList<ContentVO> list2 = (ArrayList<ContentVO>)request.getAttribute("basebal
 					<div class="header">용어 추가</div>
 					<div class="right-content">
 					
-					
+<%
+						if(list2 != null) {
+							for(ContentVO data : list) {
+%>
 						<div class="task-box yellow">
 							<div class="description-task">
-								<div class="time">승인대기중</div>
-								<div class="task-name">중견수</div>
+								<div class="time"><%= data.getcYn() %></div>
+								<div class="task-name"><%= data.getcTitle() %></div>
 							</div>
 							<div class="more-button"></div>
 							<div class="members">
-								<div class="txt">내용 : 외야수 중 가운데 필드를 수비하는 사람</div>
+								<div class="txt"><%= data.getcContents() %></div>
 							</div>
 						</div>
-						<div class="task-box blue">
-							<div class="description-task">
-								<div class="time">승인대기중</div>
-								<div class="task-name">좌익수</div>
-							</div>
-							<div class="more-button"></div>
-							<div class="members">
-								<div class="txt">내용 : 외야수 중 좌측 필드를 수비하는 사람</div>
-							</div>
-						</div>
-						<div class="task-box red">
-							<div class="description-task">
-								<div class="time">승인</div>
-								<div class="task-name">도루</div>
-							</div>
-							<div class="more-button"></div>
-							<div class="members">
-								<div class="txt">
-									이제 사전에서<br>확인해보실 수 있습니다!
-								</div>
-							</div>
-						</div>
-						<div class="task-box green">
-							<div class="description-task">
-								<div class="time">취소</div>
-								<div class="task-name">배터리</div>
-							</div>
-							<div class="more-button"></div>
-							<div class="members">
-								<div class="txt">이미 존재하는 용어입니다!</div>
-							</div>
-						</div>
-						
+						<%
+							}
+						}
+%>
 						
 					</div>
 				</div>

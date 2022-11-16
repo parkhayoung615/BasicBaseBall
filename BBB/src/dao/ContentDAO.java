@@ -44,13 +44,13 @@ public class ContentDAO {
 		return list;
 	}
 
-	// 승인 대기 확인
+	// 용어 추가 확인
 	public ArrayList<ContentVO> getBaseballList(String key) {
-		ArrayList<ContentVO> list = new ArrayList<>();
+		ArrayList<ContentVO> list2 = new ArrayList<>();
 		Connection conn = null;
 		PreparedStatement pstmt = null;
 		ResultSet rs = null;
-		String sql = "select DECODE(d.yn,'Y', '승인', 'N', '승인대기중', 'O', '취소') 특기, d.contents, d.title from mark m, dict d, member b where m.member_id = b.id AND b.id = ?;";
+		String sql = "select DECODE(d.yn,'Y', '승인', 'N', '승인대기중', 'O', '취소') 특기, d.contents, d.title from mark m, dict d, member b where m.member_id = b.id AND b.id = ?";
 
 		try {
 			conn = JdbcUtil.getConnection();
@@ -60,10 +60,10 @@ public class ContentDAO {
 
 			while (rs.next()) {
 				ContentVO vo = new ContentVO();
-				vo.setcYn(rs.getString("ys"));
+				vo.setcYn(rs.getString("yn"));
 				vo.setcTitle(rs.getString("title"));
 				vo.setcContents(rs.getString("contents"));
-				list.add(vo);
+				list2.add(vo);
 			}
 		} catch (SQLException e) {
 			e.printStackTrace();
@@ -71,6 +71,6 @@ public class ContentDAO {
 			JdbcUtil.close(conn, pstmt, rs);
 		}
 
-		return list;
+		return list2;
 	}
 }
