@@ -12,6 +12,9 @@ insert into member values('admin', '1234', 'parkhayoung615@gmail.com', '01031236
 insert into member values('yydh', '12', 'ys2110103@y-y.hs.kr', '01031236181', 'F');
 insert into member values('parkhayoung615', '1234', 'parkhayoung0615@gmail.com', '01012345678', 'F');
 
+select * from member where id = 'admin';
+
+select * from member where id = 'admin' AND adminOk = 'T';
 
 select * from member;
 

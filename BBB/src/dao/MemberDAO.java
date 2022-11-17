@@ -104,9 +104,40 @@ public class MemberDAO {
 			result = pstmt.executeUpdate();
 		} catch (SQLException e) {
 			e.printStackTrace();
+		} finally {
+			JdbcUtil.close(conn, pstmt);
 		}
 		
 		return result;
 	}
+	
+	public boolean adminMember(String id) {
+		boolean isAdmin = false;
+		
+		Connection conn = null;
+		PreparedStatement pstmt = null;
+		ResultSet rs = null;
+		String sql = "select * from member where id =?";
+		
+		try {
+			conn = JdbcUtil.getConnection();
+			pstmt = conn.prepareStatement(sql);
+			pstmt.setString(1, id);
+			rs = pstmt.executeQuery();
+			
+			if (rs.next()) {
+				if(rs.getString("adminOk").equals('T')) {
+					isAdmin = true;					
+				}
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally {
+			JdbcUtil.close(conn, pstmt, rs);
+		}
+		
+		return isAdmin;
+	}
+
 	
 }

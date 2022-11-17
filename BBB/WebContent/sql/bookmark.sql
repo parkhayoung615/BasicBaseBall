@@ -28,3 +28,6 @@ select * from mark;
 drop table mark;
 
 delete mark;
+
+
+select * from member where id = 'admin';

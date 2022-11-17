@@ -41,11 +41,7 @@
 							<li><a href="/listDictionary?sel=all">Dictionary</a></li>
 							<li calss="name"><%=vo.getUserId()%>님</li>
 							
-							<%if (vo.getUserId() == "admin") { %>
-								<li class="user"><a href="./admin.jsp">Admin Page</a></li>
-							<% } else { %>
-								<li class="user"><a href="/userLogin?id=<%=vo.getUserId()%>">My Page</a></li>
-							<%} %>
+							<li class="user"><a href="/adminOk?id=<%= vo.getUserId() %>">My Page</a></li>
 							<li class="signup"><a class="logout" href="/logout">Logout</a></li>
 							<li><a href="./select.jsp"><i
 									class="fa-solid fa-magnifying-glass"></i></a></li>
