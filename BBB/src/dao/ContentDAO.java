@@ -50,7 +50,7 @@ public class ContentDAO {
 		Connection conn = null;
 		PreparedStatement pstmt = null;
 		ResultSet rs = null;
-		String sql = "select DECODE(d.yn,'Y', '승인', 'N', '승인대기중', 'O', '취소') 특기, d.contents, d.title from mark m, dict d, member b where m.member_id = b.id AND b.id = ?";
+		String sql = "select DECODE(d.yn,'Y', '승인', 'N', '승인대기중', 'O', '취소') yn, d.contents, d.title from mark m, dict d, member b where m.member_id = b.id AND b.id = ?";
 
 		try {
 			conn = JdbcUtil.getConnection();

@@ -121,7 +121,7 @@ ArrayList<ContentVO> list2 = (ArrayList<ContentVO>)request.getAttribute("basebal
 					
 <%
 						if(list2 != null) {
-							for(ContentVO data : list) {
+							for(ContentVO data : list2) {
 %>
 						<div class="task-box yellow">
 							<div class="description-task">
