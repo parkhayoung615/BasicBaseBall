@@ -26,7 +26,7 @@ if (vo == null) {
 	out.print("<script> location.href = 'login.jsp' </script>");
 }
 
-ArrayList<ContentVO> list = (ArrayList<ContentVO>)request.getAttribute("getAdminBaseballList");
+ArrayList<ContentVO> list = (ArrayList<ContentVO>)request.getAttribute("getAdminList");
 %>
 
 
@@ -94,7 +94,13 @@ ArrayList<ContentVO> list = (ArrayList<ContentVO>)request.getAttribute("getAdmin
                                     <div class="time"><%= data.getcYn() %></div>
                                     <div class="task-name"><%= data.getcTitle() %></div>
                                 </div>
-                                <div class="more-button"></div>
+                                <button class="more-button"></button>
+                                <div class="more-box">
+                                    <div class="more-box-wrap">
+                                        <a href="/change?id=<%= data.getcId() %>&yn=Y">승인</a>
+                                        <a href="/change?id=<%= data.getcId() %>&yn=O">취소</a>
+                                    </div>
+                                </div>
                                 <div class="members">
                                     <div class="txt"><%= data.getcContents() %></div>
                                 </div>

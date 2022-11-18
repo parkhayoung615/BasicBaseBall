@@ -63,10 +63,12 @@
 
 <%
 						if(list != null) {
+							int n = 0;
 							for(BaseballVO data : list) {
+								n++;
 %>
 								<tr class="even">
-									<th scope="row"><%= data.getBbId() %></th>
+									<th scope="row"><%= n %></th>
 									<td><%= data.getBbPosition() %></td>
 									<td><%= data.getBbTitle() %></td>
 									<td><%= data.getBbContents() %></td>

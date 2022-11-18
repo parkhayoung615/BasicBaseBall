@@ -43,9 +43,9 @@ public class AdminOkServlet extends HttpServlet {
 			
 			if (result == true) {
 				if(list != null) {
-					request.setAttribute("getAdminBaseballList", list);
+					request.setAttribute("getAdminList", list);
 				}
-				response.sendRedirect("./admin.jsp");
+				request.getRequestDispatcher("./admin.jsp").forward(request, response);
 			} else {
 				response.sendRedirect("/userLogin?id=" + key);
 			}

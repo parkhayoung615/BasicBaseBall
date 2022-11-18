@@ -5,6 +5,7 @@ public class ContentVO {
 	private String cTitle;
 	private String cContents;
 	private String cYn;
+	private int cId;
 	
 	public ContentVO() {
 		super();
@@ -42,7 +43,12 @@ public class ContentVO {
 		this.cYn = cYn;
 	}
 
-	
-	
+	public int getcId() {
+		return cId;
+	}
+
+	public void setcId(int cId) {
+		this.cId = cId;
+	}
 	
 }
