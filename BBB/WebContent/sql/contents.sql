@@ -25,7 +25,7 @@ CREATE SEQUENCE dict_seq
 
 SELECT dict_seq.nextval FROM DUAL;
 
-INSERT INTO dict values(DICT_SEQ.NEXTVAL, '포수, 투수, 공식', '배터리', '투수와 포수를 묶어서 말할 때 쓰는 단어', 'Y', 'admin');
+INSERT INTO dict values(DICT_SEQ.NEXTVAL, '공식', '배터리', '투수와 포수를 묶어서 말할 때 쓰는 단어', 'Y', 'admin');
 INSERT INTO dict values(DICT_SEQ.NEXTVAL, '비공식', '가을야구', '포스트시즌, KBO 포스트시즌', 'Y', 'admin');
 INSERT INTO dict values(DICT_SEQ.NEXTVAL, '타자', '도루', '베이스에 있는 주자가 공과 상관없이 다음 베이스로 가는 것', 'Y', 'admin');
 INSERT INTO dict values(DICT_SEQ.NEXTVAL, '타자', '고의사구', '고의적인 볼넷으로 타자를 1루로 출루시키는 것', 'Y', 'admin');
