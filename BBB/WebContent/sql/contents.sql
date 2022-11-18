@@ -12,7 +12,7 @@ CREATE TABLE dict (
 SELECT * FROM dict WHERE yn = 'Y' ORDER BY id desc, position desc;
 SELECT * FROM dict WHERE position like '%투수%' ORDER BY id desc, position desc;
 
-select DECODE(d.yn,'Y', '승인', 'N', '승인대기중', 'O', '취소') yn, d.contents, d.title from dict d, member b where b.id = 'admin' AND d.write = b.id AND yn = 'N';
+select DECODE(d.yn,'Y', '승인', 'N', '승인대기중', 'O', '취소') yn, d.contents, d.title from dict d, member b where d.write = b.id AND yn = 'N';
 
 select * from dict order by id;
 

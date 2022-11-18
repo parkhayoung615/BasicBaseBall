@@ -140,7 +140,7 @@ public class MemberDAO {
 		return isAdmin;
 	}
 	
-	
+	// 비밀번호 !!
 	public int updateMember(MemberVO vo) {
 		int n = 0;
 		
@@ -152,7 +152,7 @@ public class MemberDAO {
 		conn = JdbcUtil.getConnection();
 		try {
 			pstmt = conn.prepareStatement(sql);
-			pstmt.setString(1, vo.getUserPwd());
+			pstmt.setString(1, vo.getUserChPwd());
 			pstmt.setString(2, vo.getUserId());
 			n = pstmt.executeUpdate();
 			

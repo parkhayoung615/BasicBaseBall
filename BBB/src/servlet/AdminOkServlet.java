@@ -32,7 +32,7 @@ public class AdminOkServlet extends HttpServlet {
 		MemberVO user = (MemberVO)session.getAttribute("loginOK");
 		String key = request.getParameter("id");
 		ContentDAO dao2 = new ContentDAO();
-		ArrayList<ContentVO> list = dao2.getAdminBaseballList(key);
+		ArrayList<ContentVO> list = dao2.getAdminBaseballList();
 		
 		boolean result = false;
 		if(user == null) {

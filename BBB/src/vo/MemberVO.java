@@ -5,6 +5,7 @@ public class MemberVO {
 	private String userPwd;
 	private String userEmail;
 	private String userPhone;
+	private String userChPwd;
 	
 	public MemberVO() {
 		super();
@@ -41,6 +42,15 @@ public class MemberVO {
 	public void setUserPhone(String userPhone) {
 		this.userPhone = userPhone;
 	}
+
+	public String getUserChPwd() {
+		return userChPwd;
+	}
+
+	public void setUserChPwd(String userChPwd) {
+		this.userChPwd = userChPwd;
+	}
+	
 	
 	
 }

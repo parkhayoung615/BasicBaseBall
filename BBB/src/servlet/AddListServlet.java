@@ -24,6 +24,7 @@ public class AddListServlet extends HttpServlet {
 		String user = request.getParameter("user");
 		
 		BaseballVO vo = new BaseballVO();
+	
 		vo.setBbPosition(request.getParameter("add-select"));
 		vo.setBbTitle(request.getParameter("title"));
 		vo.setBbContents(request.getParameter("text"));

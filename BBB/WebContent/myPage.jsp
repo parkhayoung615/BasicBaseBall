@@ -93,14 +93,10 @@ ArrayList<ContentVO> list = (ArrayList<ContentVO>)request.getAttribute("baseball
                         </div>
                     </div>
                     <div class="tasks-wrapper">
-                        <div class="header upcoming">현재 비밀번호</div>
-                        <form action="#" method="post">
-                            <div class="task">
-                                <input class="task-input" type="password" name="nowPwd" id="nowPwd">
-                            </div>
+                        <form action="/update?id=<%= vo.getUserId() %>" method="post">
                             <div class="header upcoming">새로운 비밀번호</div>
                             <div class="task"  style="display: flex; flex-direction: column;">
-                                <input class="task-input" type="password" name="chPwd" id="chPwd">
+                                <input class="task-input" type="password" name="chPwd" id="chPwd" required="required">
                                 <div class="error-msg"></div>         
                             </div>
                             <div class="task">

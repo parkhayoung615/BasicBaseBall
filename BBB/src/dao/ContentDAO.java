@@ -76,17 +76,16 @@ public class ContentDAO {
 		return list2;
 	}
 	
-	public ArrayList<ContentVO> getAdminBaseballList(String key) {
+	public ArrayList<ContentVO> getAdminBaseballList() {
 		ArrayList<ContentVO> list = new ArrayList<>();
 		Connection conn = null;
 		PreparedStatement pstmt = null;
 		ResultSet rs = null;
-		String sql = "select DECODE(d.yn,'N', '승인대기중') yn, d.contents, d.title from dict d, member b where b.id = ? AND d.write = b.id";
+		String sql = "select DECODE(d.yn,'Y', '승인', 'N', '승인대기중', 'O', '취소') yn, d.contents, d.title from dict d, member b where d.write = b.id AND yn = 'N'";
 
 		try {
 			conn = JdbcUtil.getConnection();
 			pstmt = conn.prepareStatement(sql);
-			pstmt.setString(1, key);
 			rs = pstmt.executeQuery();
 
 			while (rs.next()) {

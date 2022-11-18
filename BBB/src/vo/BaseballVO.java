@@ -24,8 +24,8 @@ public class BaseballVO {
 		return bbPosition;
 	}
 
-	public void setBbPosition(String strings) {
-		this.bbPosition = strings;
+	public void setBbPosition(String bbPosition) {
+		this.bbPosition = bbPosition;
 	}
 
 	public String getBbTitle() {

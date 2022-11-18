@@ -13,7 +13,7 @@
 	crossorigin="anonymous"></script>
 <script src="./js/jquery-3.1.1.min.js"></script>
 <script type="text/javascript" src="./lib/fullpage.min.js"></script>
-<script src="./js/add.js"></script>
+<!-- <script src="./js/add.js"></script> -->
 
 <link rel="stylesheet" href="./css/style.css">
 <link rel="stylesheet" href="./css/add.css">
@@ -42,22 +42,24 @@
 						<div class="tit">ADD</div>
 					</div>
 					<form action="/add?user=<%= vo.getUserId() %>" method="post">
-						<select multiple name="add-select">
-							<option selected value="투수">투수 (P)</option>
-							<option selected value="포수">포수 (C)</option>
-							<option value="1루수">1루수 (1B)</option>
-							<option value="2루수">2루수 (2B)</option>
-							<option value="3루수">3루수 (3B)</option>
-							<option value="유격수">유격수 (SS)</option>
-							<option value="좌익수">좌익수 (LF)</option>
-							<option value="중견수">중견수 (CF)</option>
-							<option value="우익수">우익수 (RF)</option>
-							<option value="지명타자">지명타자 (DH)</option>
-							<option value="대타">대타 (PH)</option>
-							<option value="대주자">대주자 (PR)</option>
-							<option selected value="공식">공식 용어</option>
-							<option value="비공식">비공식 용어</option>
-						</select>
+					<div class="selectdiv">
+                            <select name="add-select">
+                             	<option value="투수">투수 (P)</option>
+								<option value="포수">포수 (C)</option>
+								<option value="1루수">1루수 (1B)</option>
+								<option value="2루수">2루수 (2B)</option>
+								<option value="3루수">3루수 (3B)</option>
+								<option value="유격수">유격수 (SS)</option>
+								<option value="좌익수">좌익수 (LF)</option>
+								<option value="중견수">중견수 (CF)</option>
+								<option value="우익수">우익수 (RF)</option>
+								<option value="지명타자">지명타자 (DH)</option>
+								<option value="대타">대타 (PH)</option>
+								<option value="대주자">대주자 (PR)</option>
+								<option selected value="공식">공식 용어</option>
+								<option value="비공식">비공식 용어</option>
+                            </select>
+                        </div>
 
 						<!-- dribbble -->
 						<a class="dribbble"
