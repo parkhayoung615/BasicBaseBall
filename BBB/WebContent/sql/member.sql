@@ -4,7 +4,6 @@ CREATE TABLE member (
 	email VARCHAR(300) NOT NULL,
 	phone VARCHAR2(300) NOT NULL,
 	adminOk varchar2(2),
-	CONSTRAINT adminOk_check check (adminOk in ('T', 'F')),
 	PRIMARY KEY(id)
 );
 

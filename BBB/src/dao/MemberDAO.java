@@ -111,6 +111,7 @@ public class MemberDAO {
 		return result;
 	}
 	
+	// 관리자 계정 확인하기
 	public boolean adminMember(String id) {
 		boolean isAdmin = false;
 		
@@ -125,18 +126,42 @@ public class MemberDAO {
 			pstmt.setString(1, id);
 			rs = pstmt.executeQuery();
 			
-			if (rs.next()) {
-				if(rs.getString("adminOk").equals('T')) {
+			while (rs.next()) {
+				String ok = rs.getString("adminOk");
+				if(ok.equals("T")) {
 					isAdmin = true;					
 				}
 			}
-		} catch (SQLException e) {
+			} catch (SQLException e) {
 			e.printStackTrace();
 		} finally {
 			JdbcUtil.close(conn, pstmt, rs);
 		}
-		
 		return isAdmin;
+	}
+	
+	
+	public int updateMember(MemberVO vo) {
+		int n = 0;
+		
+		// DB 연동
+		Connection conn = null;
+		PreparedStatement pstmt = null;
+		String sql = "update member set password=? where id=?";
+		
+		conn = JdbcUtil.getConnection();
+		try {
+			pstmt = conn.prepareStatement(sql);
+			pstmt.setString(1, vo.getUserPwd());
+			pstmt.setString(2, vo.getUserId());
+			n = pstmt.executeUpdate();
+			
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally {
+			JdbcUtil.close(conn, pstmt);
+		}
+		return n;
 	}
 
 	

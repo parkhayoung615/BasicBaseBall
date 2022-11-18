@@ -24,7 +24,7 @@
             <!-- 첫 번째 영역 -->
             <section class="section login">
                 <div class="slide" id="slide1">
-                    <form action="./login" method="post">
+                    <form action="/login" method="post">
                         <div class="login-wrap">
                             <ul class="login-list">
                                 <li class="logo"><a href="./index.jsp">B.B.B</a></li>

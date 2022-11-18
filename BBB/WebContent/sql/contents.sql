@@ -12,12 +12,16 @@ CREATE TABLE dict (
 SELECT * FROM dict WHERE yn = 'Y' ORDER BY id desc, position desc;
 SELECT * FROM dict WHERE position like '%투수%' ORDER BY id desc, position desc;
 
-select * from dict;
+select DECODE(d.yn,'Y', '승인', 'N', '승인대기중', 'O', '취소') yn, d.contents, d.title from dict d, member b where b.id = 'admin' AND d.write = b.id AND yn = 'N';
+
+select * from dict order by id;
 
 CREATE SEQUENCE dict_seq
 	START WITH 1
 	MINVALUE 1
 ;
+
+SELECT dict_seq.nextval FROM DUAL;
 
 INSERT INTO dict values(DICT_SEQ.NEXTVAL, '포수, 투수, 공식', '배터리', '투수와 포수를 묶어서 말할 때 쓰는 단어', 'Y', 'admin');
 INSERT INTO dict values(DICT_SEQ.NEXTVAL, '비공식', '가을야구', '포스트시즌, KBO 포스트시즌', 'Y', 'admin');
@@ -30,6 +34,7 @@ INSERT INTO dict values(DICT_SEQ.NEXTVAL, '공식', '볼', '투수의 공이 스
 INSERT INTO dict values(DICT_SEQ.NEXTVAL, '공식', '볼넷', '타자가 타석에서 4개의 볼 카운트를 얻어내 1루로 나가는 것을 뜻한다.', 'Y', 'admin');
 
 DROP TABLE dict;
+delete dict;
 
 DROP SEQUENCE dict_seq;
 

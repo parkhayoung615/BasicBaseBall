@@ -23,8 +23,7 @@ if (vo == null) {
 	out.print("<script> location.href = 'login.jsp' </script>");
 }
 
-ArrayList<ContentVO> list = (ArrayList<ContentVO>)request.getAttribute("bookmarkList");
-ArrayList<ContentVO> list2 = (ArrayList<ContentVO>)request.getAttribute("baseballList");
+ArrayList<ContentVO> list = (ArrayList<ContentVO>)request.getAttribute("baseballList");
 %>
 
 <body onload="showImage()"
@@ -86,30 +85,55 @@ ArrayList<ContentVO> list2 = (ArrayList<ContentVO>)request.getAttribute("basebal
 					</div>
 				</div>
 				<div class="page-content">
-					<div class="header">My Page</div>
-					<div class="content-categories">
-						<div class="label-wrapper">
-							<input class="nav-item" name="nav" type="radio" id="opt-2"
-								checked> <label class="category" for="opt-2">BOOKMARK</label>
-						</div>
-					</div>
-					<div class="tasks-wrapper">
-						<div class="header upcoming">북마크 목록</div>
-<%
-						if(list != null) {
-							for(ContentVO data : list) {
-%>
-						<div class="task">
-							<span class="label-text"><a href="./dict.html"><%= data.getcTitle() %></a></span>
-							<span class="tag waiting"><%= data.getcPosition() %></span>
-						</div>
-<%
-							}
-						}
-%>
-						
-					</div>
-				</div>
+                    <div class="header">My Page</div>
+                    <div class="content-categories">
+                        <div class="label-wrapper">
+                            <input class="nav-item" name="nav" type="radio" id="opt-2" checked>
+                            <label class="category" for="opt-2">비밀번호 변경</label>
+                        </div>
+                    </div>
+                    <div class="tasks-wrapper">
+                        <div class="header upcoming">현재 비밀번호</div>
+                        <form action="#" method="post">
+                            <div class="task">
+                                <input class="task-input" type="password" name="nowPwd" id="nowPwd">
+                            </div>
+                            <div class="header upcoming">새로운 비밀번호</div>
+                            <div class="task"  style="display: flex; flex-direction: column;">
+                                <input class="task-input" type="password" name="chPwd" id="chPwd">
+                                <div class="error-msg"></div>         
+                            </div>
+                            <div class="task">
+                                <input class="task-btn" type="submit" value="변경하기">
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+                <script>
+                    const errMsg = {
+                        pw: "8~20자의 영문, 숫자, 특수문자를 모두 포함한 비밀번호를 입력해주세요"
+                    }
+
+                    // pwVal: 패스워드, pwReVal: 패스워드 재입력, isPwValid: 패스워드 유효 여부
+                    let pwVal = "", pwReVal = "", isPwValid = false
+                    const pwInputEl = document.querySelector('.task #chPwd')
+                    const pwErrorMsgEl = document.querySelector('.task .error-msg')
+                    pwInputEl.addEventListener('change', () => {
+                        const pwRegExp = /^(?=.*[A-Za-z])(?=.*[0-9])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{8,20}$/
+                        pwVal = pwInputEl.value
+                        if (pwRegExp.test(pwVal)) { // 정규식 조건 만족 O
+                            isPwValid = true
+                            pwErrorMsgEl.textContent = ""
+                        }
+                        else { // 정규식 조건 만족 X
+                            isPwValid = false
+                            pwErrorMsgEl.textContent = errMsg.pw
+                        }
+                        checkPwValid()
+                        console.log(pwVal, pwReVal, isPwValid, account)
+                    });
+                </script>
 
 				<!-- right side bar -->
 				<div class="right-bar">
@@ -120,8 +144,8 @@ ArrayList<ContentVO> list2 = (ArrayList<ContentVO>)request.getAttribute("basebal
 					<div class="right-content">
 					
 <%
-						if(list2 != null) {
-							for(ContentVO data : list2) {
+						if(list != null) {
+							for(ContentVO data : list) {
 %>
 						<div class="task-box yellow">
 							<div class="description-task">

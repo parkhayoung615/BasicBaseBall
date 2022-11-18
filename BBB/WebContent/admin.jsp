@@ -1,3 +1,5 @@
+<%@page import="java.util.ArrayList"%>
+<%@page import="vo.ContentVO"%>
 <%@page import="vo.MemberVO"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
@@ -19,13 +21,14 @@
 </head>
 <%
 MemberVO vo = (MemberVO) session.getAttribute("loginOK");
-String id = (String)session.getAttribute("admin");
-System.out.println(vo.getUserId());
 if (vo == null) {
 	out.println("<script>alert('로그인을 진행 해주세요!');</script>");
 	out.print("<script> location.href = 'login.jsp' </script>");
 }
+
+ArrayList<ContentVO> list = (ArrayList<ContentVO>)request.getAttribute("getAdminBaseballList");
 %>
+
 
 <body onload="showImage()" style="-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none">
     <div class="wrapper">
@@ -72,7 +75,7 @@ if (vo == null) {
                                     stroke-linejoin="round" class="feather feather-zap">
                                     <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2" />
                                 </svg>
-                                <span><a href="#">로그아웃</a></span>
+                                <span><a href="/logout">로그아웃</a></span>
                             </li>
                         </ul>
                     </div>
@@ -82,26 +85,25 @@ if (vo == null) {
                     <div class="tasks-wrapper">
                         <div class="header">승인 대기</div>
                         <div class="right-content">
+<%
+						if(list != null) {
+							for(ContentVO data : list) {
+%>
                             <div class="task-box yellow">
                                 <div class="description-task">
-                                    <div class="time">승인대기중</div>
-                                    <div class="task-name">중견수</div>
+                                    <div class="time"><%= data.getcYn() %></div>
+                                    <div class="task-name"><%= data.getcTitle() %></div>
                                 </div>
                                 <div class="more-button"></div>
                                 <div class="members">
-                                    <div class="txt">내용 : 외야수 중 가운데 필드를 수비하는 사람</div>
+                                    <div class="txt"><%= data.getcContents() %></div>
                                 </div>
                             </div>
-                            <div class="task-box blue">
-                                <div class="description-task">
-                                    <div class="time">승인대기중</div>
-                                    <div class="task-name">좌익수</div>
-                                </div>
-                                <div class="more-button"></div>
-                                <div class="members">
-                                    <div class="txt">내용 : 외야수 중 좌측 필드를 수비하는 사람</div>
-                                </div>
-                            </div>
+<%
+							}
+						}
+%>
+                            
                         </div>
                     </div>
                 </div>

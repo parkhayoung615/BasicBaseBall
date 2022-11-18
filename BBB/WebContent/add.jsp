@@ -41,22 +41,22 @@
 					<div class="title">
 						<div class="tit">ADD</div>
 					</div>
-					<form action="/add" method="post">
+					<form action="/add?user=<%= vo.getUserId() %>" method="post">
 						<select multiple name="add-select">
-							<option selected value="bbp">투수 (P)</option>
-							<option selected value="bbc">포수 (C)</option>
-							<option value="bb1b">1루수 (1B)</option>
-							<option value="bb2b">2루수 (2B)</option>
-							<option value="bb3b">3루수 (3B)</option>
-							<option value="bbss">유격수 (SS)</option>
-							<option value="bblf">좌익수 (LF)</option>
-							<option value="bbcf">중견수 (CF)</option>
-							<option value="bbrf">우익수 (RF)</option>
-							<option value="bbdh">지명타자 (DH)</option>
-							<option value="bbph">대타 (PH)</option>
-							<option value="bbpr">대주자 (PR)</option>
-							<option selected value="bbd">공식 용어</option>
-							<option value="bbi">비공식 용어</option>
+							<option selected value="투수">투수 (P)</option>
+							<option selected value="포수">포수 (C)</option>
+							<option value="1루수">1루수 (1B)</option>
+							<option value="2루수">2루수 (2B)</option>
+							<option value="3루수">3루수 (3B)</option>
+							<option value="유격수">유격수 (SS)</option>
+							<option value="좌익수">좌익수 (LF)</option>
+							<option value="중견수">중견수 (CF)</option>
+							<option value="우익수">우익수 (RF)</option>
+							<option value="지명타자">지명타자 (DH)</option>
+							<option value="대타">대타 (PH)</option>
+							<option value="대주자">대주자 (PR)</option>
+							<option selected value="공식">공식 용어</option>
+							<option value="비공식">비공식 용어</option>
 						</select>
 
 						<!-- dribbble -->

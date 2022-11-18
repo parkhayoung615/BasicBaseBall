@@ -58,11 +58,12 @@ public class BaseballDAO {
 		return list;
 	}
 	
+	// 사전에 추가됨
 	public int addBaseballList(BaseballVO vo) {
 		int result = 0;
 		Connection conn = null;
 		PreparedStatement pstmt = null;
-		String sql = "INSERT INTO dict VALUES(DICT_SEQ.nextval, ?, ?, ?, ?, ?)";
+		String sql = "INSERT INTO dict VALUES(DICT_SEQ.nextval, ?, ?, ?, 'N', ?)";
 		
 		try {
 			conn = JdbcUtil.getConnection();
@@ -70,8 +71,7 @@ public class BaseballDAO {
 			pstmt.setString(1, vo.getBbPosition());
 			pstmt.setString(2, vo.getBbTitle());
 			pstmt.setString(3, vo.getBbContents());
-			pstmt.setString(4, vo.getBbYn());
-			pstmt.setString(5, vo.getBbWrite());
+			pstmt.setString(4, vo.getBbWrite());
 			result = pstmt.executeUpdate();
 		} catch(SQLException e) {
 			e.printStackTrace();

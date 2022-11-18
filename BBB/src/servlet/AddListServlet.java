@@ -28,13 +28,11 @@ public class AddListServlet extends HttpServlet {
 		vo.setBbTitle(request.getParameter("title"));
 		vo.setBbContents(request.getParameter("text"));
 		vo.setBbWrite(user);
-		vo.setBbYn("N");
 		
 		BaseballDAO dao = new BaseballDAO();
 		int n = dao.addBaseballList(vo);
 		
 		if(n>0) {
-			
 			response.sendRedirect("/listDictionary?sel=all");
 		} else {
 			response.sendRedirect("/add.jsp");

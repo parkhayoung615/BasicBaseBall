@@ -29,12 +29,10 @@ public class ListContentServlet extends HttpServlet {
 		PrintWriter out = response.getWriter();
 		String key = request.getParameter("id");
 		ContentDAO dao = new ContentDAO();
-		ArrayList<ContentVO> list = dao.getBookmarkList(key);
-		ArrayList<ContentVO> list2 = dao.getBaseballList(key);
+		ArrayList<ContentVO> list = dao.getBaseballList(key);
 		
 		if(list != null) {
-			request.setAttribute("bookmarkList", list);
-			request.setAttribute("baseballList", list2);
+			request.setAttribute("baseballList", list);
 		}
 		
 		request.getRequestDispatcher("./myPage.jsp").forward(request, response);

@@ -296,12 +296,32 @@ button {
     font-size: 13px;
 }
 
-.task:hover {
-    transform: translatex(2px);
+.task .task-input {
+    border-radius: 50px;
+    border: none;
+    background-color: rgb(238, 238, 238);
+    padding: 5px;
+    width: 500px;
+    height: 45px;
+    padding-left: 15px;
+    margin: 0 auto;
 }
 
-.task label {
-    cursor: pointer;
+.task-btn {
+    border-radius: 50px;
+    border: none;
+    width: 150px;
+    height: 45px;
+    background-color: rgb(0, 32, 99);
+    color: #fff;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.error-msg {
+    height: 20px;
+    font-size: 15px;
+    color: red;
 }
 
 label .label-text {
@@ -369,4 +389,25 @@ label .label-text {
     font-size: 20px;
     color: #002063;
     margin: 10px;
+}
+
+.task-box {
+    width: 500px;
+    margin: 20px auto;
+}
+
+.task-name {
+    font-family: 'Noto Bs';
+    font-size: 17px;
+    color: #000000;
+}
+
+.members .txt {
+    width: 100%;
+    font-family: 'Noto R';
+    padding-bottom: 10px;
+}
+
+.description-task, .members .txt {
+    text-align: center;
 }
