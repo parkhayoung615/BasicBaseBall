@@ -20,7 +20,7 @@
 
         <!-- 풀페이지 영역 -->
         <div id="fullpage">
-            <!-- 메인 영역 -->
+            <!-- 메인 영역(로그인) -->
             <!-- 첫 번째 영역 -->
             <section class="section login">
                 <div class="slide" id="slide1">
@@ -40,7 +40,8 @@
                 </div>
             </section>
 
-           <%@ include file="./view/footer.jsp"%>
+			<!-- footer 영역 -->
+           	<%@ include file="./view/footer.jsp"%>
         </div>
     </div>
 

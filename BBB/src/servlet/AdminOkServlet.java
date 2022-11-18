@@ -25,13 +25,14 @@ public class AdminOkServlet extends HttpServlet {
     }
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		// 관리자 페이지에서 가져오기
 		response.setContentType("text/html; charset=UTF-8");
 		
 		PrintWriter out = response.getWriter();
 		HttpSession session = request.getSession();
 		MemberVO user = (MemberVO)session.getAttribute("loginOK");
-		String key = request.getParameter("id");
 		ContentDAO dao2 = new ContentDAO();
+		String key = request.getParameter("id");
 		ArrayList<ContentVO> list = dao2.getAdminBaseballList();
 		
 		boolean result = false;

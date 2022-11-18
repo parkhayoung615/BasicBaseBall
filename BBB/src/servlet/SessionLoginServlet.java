@@ -22,6 +22,7 @@ public class SessionLoginServlet extends HttpServlet {
     }
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		// 세션 로그인 서블릿
 		response.setContentType("text/html; charset=UTF-8");
 		
 		String id, pwd;

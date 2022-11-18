@@ -76,7 +76,7 @@ public class ContentDAO {
 		return list2;
 	}
 	
-	// 용어 추가 (ㄱ관리자 계정)
+	// 용어 추가 (관리자 계정)
 	public ArrayList<ContentVO> getAdminBaseballList() {
 		ArrayList<ContentVO> list = new ArrayList<>();
 		Connection conn = null;

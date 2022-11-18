@@ -14,6 +14,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Dictionary</title>
+
 <script src="./js/dict.js"></script>
 
 <link rel="stylesheet" href="./css/dict.css">
@@ -30,9 +31,8 @@
 		out.print("<script> location.href = 'index.jsp' </script>");
 	}
 	
-
+	// 사전 가져오기
 	ArrayList<BaseballVO> list = (ArrayList<BaseballVO>)request.getAttribute("baseballList");
-	
 %>
 
 		<!-- 풀페이지 영역 -->
@@ -84,36 +84,17 @@
 			</div>
 		</div>
 		
-		<script type="text/javascript">
+		<!--<script type="text/javascript">
 			$(function() {
 			  $(".heart").on("click", function() {
 			    $(this).toggleClass("is-active");
 			  });
 			});
-		</script>
+		</script>-->
 
 
 		<!-- footer 영역 -->
-		<div class="section fp-auto-height">
-			<footer>
-				<div class="footer-wrap">
-					<ul class="footer-list">
-						<li class="logo">B.B.B</li>
-						<li class="footer-text">&copy; 2022. JSP Project B.B.B All
-							Rights Reserved.</li>
-						<li class="sns">
-							<ul class="sns-list">
-								<li><a href="https://www.instagram.com/phy_0615/"><i
-										class="fab fa-instagram"></i></a></li>
-								<li><a href="https://github.com/parkhayoung615"><i
-										class="fab fa-github"></i></a></li>
-							</ul>
-						</li>
-					</ul>
-				</div>
-			</footer>
-		</div>
-	</div>
+        <%@ include file="./view/footer.jsp"%>
 	</div>
 
 </body>

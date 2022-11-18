@@ -24,23 +24,26 @@ public class JoinServlet extends HttpServlet {
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
+		// 회원가입 !!
 		request.setCharacterEncoding("UTF-8");
 		response.setContentType("text/html; charset=UTF-8");
 		PrintWriter out = response.getWriter();
 
 		MemberDAO dao = new MemberDAO();
-		boolean isExist = dao.existId(request.getParameter("id"));
 		MemberVO data = new MemberVO();
+		boolean isExist = dao.existId(request.getParameter("id"));
+		
 		String oKPwd = request.getParameter("okpwd");
 		String backEmail = request.getParameter("selectbox");
 		String pwd = request.getParameter("pwd");
 		String id = request.getParameter("id");
 		String tel = request.getParameter("phone");
 
+		// 정규식
 		String idExp = "^[a-zA-Z0-9]{6,20}$";
 		String pwdExp = "^(?=.*[A-Za-z])(?=.*[0-9])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{8,20}$";
 		String telExp = "^01(?:0|1|[6-9])(?:\\d{3}|\\d{4})\\d{4}$";
-		// 정규식으로 확인
+		// 정규식 확인
 		boolean idBool = Pattern.matches(idExp, id);
 		boolean pwdBool = Pattern.matches(pwdExp, pwd);
 		boolean telBool = Pattern.matches(telExp, tel);
@@ -49,6 +52,7 @@ public class JoinServlet extends HttpServlet {
 
 		if (isExist) {
 			out.print("<script>alert('이미 존재하는 ID 입니다. 다시 입력해주세요.'); history.back();</script>");
+		// else if 컬럼 값을 대조하며 확인
 		} else if (pwd.equals(oKPwd) && idBool == true && pwdBool == true && telBool == true) {
 			// 조인 컬럼값
 			data.setUserId(request.getParameter("id"));

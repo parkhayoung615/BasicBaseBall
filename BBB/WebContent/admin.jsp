@@ -25,10 +25,9 @@ if (vo == null) {
 	out.println("<script>alert('로그인을 진행 해주세요!');</script>");
 	out.print("<script> location.href = 'login.jsp' </script>");
 }
-
+// 승인 대기 목록 출력
 ArrayList<ContentVO> list = (ArrayList<ContentVO>)request.getAttribute("getAdminList");
 %>
-
 
 <body onload="showImage()" style="-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none">
     <div class="wrapper">
@@ -127,7 +126,6 @@ ArrayList<ContentVO> list = (ArrayList<ContentVO>)request.getAttribute("getAdmin
             </div>
         </section>
     </div>
-    <!--https://codepen.io/coopergoeke/pen/KKzrgOQ-->
 
 
 </body>

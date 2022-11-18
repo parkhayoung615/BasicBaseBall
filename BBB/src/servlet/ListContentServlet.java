@@ -24,9 +24,9 @@ public class ListContentServlet extends HttpServlet {
     }
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-	response.setContentType("text/html; charset=UTF-8");
+		// 리스트 가져오기
+		response.setContentType("text/html; charset=UTF-8");
 		
-		PrintWriter out = response.getWriter();
 		String key = request.getParameter("id");
 		ContentDAO dao = new ContentDAO();
 		ArrayList<ContentVO> list = dao.getBaseballList(key);

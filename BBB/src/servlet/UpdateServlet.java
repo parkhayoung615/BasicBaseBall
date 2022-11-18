@@ -19,6 +19,7 @@ public class UpdateServlet extends HttpServlet {
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
+		// 비밀번호 변경
 		request.setCharacterEncoding("UTF-8");
 		response.setContentType("text/html;charset=UTF-8");
 
@@ -26,6 +27,7 @@ public class UpdateServlet extends HttpServlet {
 		MemberDAO dao = new MemberDAO();
 		MemberVO vo = new MemberVO();
 
+		// 비밀번호 정규식으로 확인
 		String key = request.getParameter("id");
 		String chPwd = request.getParameter("chPwd");
 		String pwdExp = "^(?=.*[A-Za-z])(?=.*[0-9])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{8,20}$";

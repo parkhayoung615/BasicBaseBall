@@ -18,19 +18,19 @@ public class AddListServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		// 사전에 추가
 		request.setCharacterEncoding("UTF-8");
 		response.setContentType("text/html; charset=UTF-8");
-		PrintWriter out = response.getWriter();
 		String user = request.getParameter("user");
 		
 		BaseballVO vo = new BaseballVO();
+		BaseballDAO dao = new BaseballDAO();
 	
 		vo.setBbPosition(request.getParameter("add-select"));
 		vo.setBbTitle(request.getParameter("title"));
 		vo.setBbContents(request.getParameter("text"));
 		vo.setBbWrite(user);
-		
-		BaseballDAO dao = new BaseballDAO();
+
 		int n = dao.addBaseballList(vo);
 		
 		if(n>0) {

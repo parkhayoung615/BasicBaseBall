@@ -22,7 +22,9 @@ public class QuitSevlet extends HttpServlet {
     }
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		// 회원탈퇴 서블릿
 		response.setContentType("text/html; charset=UTF-8");
+		
 		PrintWriter out = response.getWriter();
 		HttpSession session = request.getSession();
 		MemberVO user = (MemberVO)session.getAttribute("loginOK");

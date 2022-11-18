@@ -62,7 +62,7 @@ public class MemberDAO {
 	} 
 	
 	
-	
+	// 회원 탈퇴 (아이디 검색)
 	public boolean existId(String id) {
 		boolean isExist = false;
 		
@@ -91,6 +91,7 @@ public class MemberDAO {
 		
 	}
 	
+	// 회원 탈퇴
 	public int removeMember(String id) {
 		int result = 0;
 		Connection conn = null;
@@ -140,7 +141,7 @@ public class MemberDAO {
 		return isAdmin;
 	}
 	
-	// 비밀번호 !!
+	// 비밀번호 변경
 	public int updateMember(MemberVO vo) {
 		int n = 0;
 		

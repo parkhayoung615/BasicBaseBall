@@ -22,9 +22,9 @@ public class SessionLogoutServlet extends HttpServlet {
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
+		// 세션 로그아웃 서블릿
 		response.setContentType("text/html; charset=UTF-8");
 		HttpSession session = request.getSession();
-		PrintWriter out = response.getWriter();
 
 		MemberVO vo = (MemberVO) session.getAttribute("loginOK");
 		

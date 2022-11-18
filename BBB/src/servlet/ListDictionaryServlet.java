@@ -20,10 +20,10 @@ public class ListDictionaryServlet extends HttpServlet {
        
     public ListDictionaryServlet() {
         super();
-        // TODO Auto-generated constructor stub
     }
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		// 검색어 출력되는 서블릿 ㅎㅎ
 		response.setContentType("text/html; charset=UTF-8");
 		
 		PrintWriter out = response.getWriter();
