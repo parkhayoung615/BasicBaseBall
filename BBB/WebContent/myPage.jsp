@@ -3,6 +3,7 @@
 <%@page import="vo.MemberVO"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+<% MemberVO vo = (MemberVO) session.getAttribute("loginOK"); %>
 <!DOCTYPE html>
 <html lang="ko">
 
@@ -11,13 +12,16 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>My Page</title>
-<script src="./js/jquery-3.1.1.min.js"></script>
-<link rel="stylesheet" href="./css/mypage.css">
-<link rel="stylesheet" href="./css/style.css">
+
+    <!-- fontawesome cdn, fullpage js, fullpage jquery 사용 -->
+    <script src="https://kit.fontawesome.com/8ca5eadfef.js" crossorigin="anonymous"></script>
+    <script src="./js/jquery-3.1.1.min.js"></script>
+    
+	<link rel="stylesheet" href="./css/mypage.css">
+	<link rel="stylesheet" href="./css/style.css">
 </head>
 
 <%
-MemberVO vo = (MemberVO) session.getAttribute("loginOK");
 if (vo == null) {
 	out.println("<script>alert('로그인을 진행 해주세요!');</script>");
 	out.print("<script> location.href = 'login.jsp' </script>");
@@ -150,7 +154,7 @@ ArrayList<ContentVO> list = (ArrayList<ContentVO>)request.getAttribute("baseball
 								<div class="time"><%= data.getcYn() %></div>
 								<div class="task-name"><%= data.getcTitle() %></div>
 							</div>
-							<div class="more-button"></div>
+							 <a href="/deleteList?id=<%= data.getcId() %>"><i class="fa-solid fa-x more-button"></i></a>
 							<div class="members">
 								<div class="txt"><%= data.getcContents() %></div>
 							</div>

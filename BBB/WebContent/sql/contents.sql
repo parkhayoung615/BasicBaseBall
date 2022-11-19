@@ -18,6 +18,8 @@ update dict set yn = 'O' where id = ?;
 
 select * from dict order by id;
 
+Delete from dict where id=21;
+
 CREATE SEQUENCE dict_seq
 	START WITH 1
 	MINVALUE 1

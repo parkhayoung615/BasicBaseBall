@@ -17,6 +17,8 @@
         Base Base Ball
         클래스명에 하이픈(-)만 사용 ! 언더바(_) 사용 금지
         큰 틀에 wrap 기본 사용
+        
+        mypage에서 삭제 누르면 delete 구현
     -->
     <div class="wrapper">
         <!-- header 영역 -->

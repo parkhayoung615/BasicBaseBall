@@ -52,7 +52,7 @@ public class ContentDAO {
 		Connection conn = null;
 		PreparedStatement pstmt = null;
 		ResultSet rs = null;
-		String sql = "select DECODE(d.yn,'Y', '승인', 'N', '승인대기중', 'O', '취소') yn, d.contents, d.title from dict d, member b where b.id = ? AND d.write = b.id";
+		String sql = "select DECODE(d.yn,'Y', '승인', 'N', '승인대기중', 'O', '취소') yn, d.contents, d.title, d.id from dict d, member b where b.id = ? AND d.write = b.id";
 
 		try {
 			conn = JdbcUtil.getConnection();
@@ -63,6 +63,7 @@ public class ContentDAO {
 			while (rs.next()) {
 				ContentVO vo = new ContentVO();
 				vo.setcYn(rs.getString("yn"));
+				vo.setcId(rs.getInt("id"));
 				vo.setcTitle(rs.getString("title"));
 				vo.setcContents(rs.getString("contents"));
 				list2.add(vo);
@@ -76,7 +77,7 @@ public class ContentDAO {
 		return list2;
 	}
 	
-	// 용어 추가 (관리자 계정)
+	// 용어 추가 확인 (관리자 계정)
 	public ArrayList<ContentVO> getAdminBaseballList() {
 		ArrayList<ContentVO> list = new ArrayList<>();
 		Connection conn = null;
@@ -106,7 +107,7 @@ public class ContentDAO {
 	}
 	
 	
-	// 용어 수정 (ㄱ관리자 계정)
+	// 용어 수정(yn 바꾸기) (ㄱ관리자 계정)
 		public int getAdminBaseballChage(ContentVO vo) {
 			Connection conn = null;
 			PreparedStatement pstmt = null;
@@ -118,6 +119,27 @@ public class ContentDAO {
 				pstmt = conn.prepareStatement(sql);
 				pstmt.setString(1, vo.getcYn());
 				pstmt.setInt(2, vo.getcId());
+				n = pstmt.executeUpdate();
+
+			} catch (SQLException e) {
+				e.printStackTrace();
+			} finally {
+				JdbcUtil.close(conn, pstmt);
+			}
+			return n;
+		}
+		
+		// 목록 삭제 (사용자 계정)
+		public int BaseballDelete(ContentVO vo) {
+			Connection conn = null;
+			PreparedStatement pstmt = null;
+			String sql = "Delete from dict where id=?";
+			int n = 0;
+
+			try {
+				conn = JdbcUtil.getConnection();
+				pstmt = conn.prepareStatement(sql);
+				pstmt.setInt(1, vo.getcId());
 				n = pstmt.executeUpdate();
 
 			} catch (SQLException e) {

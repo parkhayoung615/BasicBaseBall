@@ -215,10 +215,6 @@ button {
     position: absolute;
     width: 3px;
     height: 3px;
-    border-radius: 50%;
-    background-color: #8e92a4;
-    box-shadow: 0 -4px 0 0 #8e92a4, 0 4px 0 0 #8e92a4;
-    opacity: 0.4;
     right: 20px;
     top: 30px;
     cursor: pointer;
@@ -410,4 +406,12 @@ label .label-text {
 
 .description-task, .members .txt {
     text-align: center;
+}
+
+
+
+
+.fa-x {
+	color: #000;
+	font-size: 15px
 }

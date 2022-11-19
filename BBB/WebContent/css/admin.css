@@ -1,5 +1,18 @@
 @import 'https://fonts.googleapis.com/css?family=Montserrat:300,400,700';
 
+.more-button {
+    position: absolute;
+    width: 3px;
+    height: 3px;
+    right: 20px;
+    top: 30px;
+    cursor: pointer;
+   	border-radius: 50%;
+    background-color: #8e92a4;
+    box-shadow: 0 -4px 0 0 #8e92a4, 0 4px 0 0 #8e92a4;
+    opacity: 0.4;
+}
+
 .rwd-table {
     margin: 1em auto;
     min-width: 710px;
@@ -111,14 +124,14 @@
 }
 
 
-.more-button:focus ~ .more-box {
+.more:hover .more-box {
     display: block;
 }
 
 .more-box {
     display: none;
     top: 30px;
-    right: -35%;
+   	right: -15%;
     width: 100px;
     height: 45px;
     position: absolute;
@@ -135,15 +148,15 @@
     box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.151);
 }
 
-.more-box-wrap a {
+.more-box a {
     width: 100%;
+    display: block;
 }
 
-.more-box-wrap a:first-child {
+.more-box a:first-child {
     border-bottom: 1px solid rgb(230, 230, 230);
 }
 
-.more-box-wrap a:hover {
+.more-box a:hover {
     background-color: rgb(230, 230, 230);
-    
 }

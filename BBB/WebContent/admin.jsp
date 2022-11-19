@@ -3,6 +3,7 @@
 <%@page import="vo.MemberVO"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<% MemberVO vo = (MemberVO) session.getAttribute("loginOK"); %>
 <!DOCTYPE html>
 <html lang="ko">
 
@@ -20,7 +21,6 @@
     <link rel="stylesheet" href="./css/admin.css">
 </head>
 <%
-MemberVO vo = (MemberVO) session.getAttribute("loginOK");
 if (vo == null) {
 	out.println("<script>alert('로그인을 진행 해주세요!');</script>");
 	out.print("<script> location.href = 'login.jsp' </script>");
@@ -93,13 +93,15 @@ ArrayList<ContentVO> list = (ArrayList<ContentVO>)request.getAttribute("getAdmin
                                     <div class="time"><%= data.getcYn() %></div>
                                     <div class="task-name"><%= data.getcTitle() %></div>
                                 </div>
-                                <button class="more-button"></button>
-                                <div class="more-box">
-                                    <div class="more-box-wrap">
-                                        <a href="/change?id=<%= data.getcId() %>&yn=Y">승인</a>
-                                        <a href="/change?id=<%= data.getcId() %>&yn=O">취소</a>
-                                    </div>
-                                </div>
+                                <div class="more">
+	                                <button class="more-button"></button>
+	                                <div class="more-box">
+	                                    <div class="more-box-wrap">
+	                                        <a href="/change?id=<%= data.getcId() %>&yn=Y">승인</a>
+	                                        <a href="/change?id=<%= data.getcId() %>&yn=O">취소</a>
+	                                    </div>
+	                                </div>
+	                            </div>
                                 <div class="members">
                                     <div class="txt"><%= data.getcContents() %></div>
                                 </div>
