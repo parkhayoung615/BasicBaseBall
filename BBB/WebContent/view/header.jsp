@@ -1,7 +1,6 @@
 <%@page import="vo.MemberVO"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-<% MemberVO vo = (MemberVO)session.getAttribute("loginOK"); %>
 <!DOCTYPE html>
 <html lang="ko">
 
@@ -35,6 +34,7 @@
 						</ul>
 <%
 						 // session 속성 (logOK)이 설정되어 있으면 "id 님", 그렇지 않으면 로그인
+						 MemberVO vo = (MemberVO)session.getAttribute("loginOK");
 						if (vo != null) {
 %>
 						<ul class="right-header sub-menu">
