@@ -31,11 +31,6 @@ public class BaseballDAO {
 			if (key.equals("all")) {
 				sql = "SELECT * FROM dict WHERE yn = 'Y' ORDER BY id desc, position desc";
 				pstmt = conn.prepareStatement(sql);
-			// 사용자가 입력하는 검색어 (포지션 검색)
-			} else if (key2.equals("p")) {
-				sql = "SELECT * FROM dict WHERE position like ? ORDER BY id desc, position desc";
-				pstmt = conn.prepareStatement(sql);
-				pstmt.setString(1, str);
 			// 사용자가 입력하는 검색어 (용어에서 검색)
 			} else {
 				sql = "SELECT * FROM dict WHERE title like ? ORDER BY id desc, position desc";
