@@ -26,6 +26,6 @@
 그러한 경험을 바탕으로
 ‘야구 기본 상식 웹사이트’ 라는 주제를 구상하게 되었습니다.</p>
 <br/>
-  
+  <img src="notion://www.notion.so/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2Ffbf3dca8-d5cc-41f9-b1e9-54e2bdc14fed%2Fscreencapture-localhost-8090-index-jsp-2023-06-01-11_37_41.png?table=block&id=39c7b21b-27de-42ad-9057-cd99ef995f27&spaceId=befbc823-8677-4e17-93ec-a370ba6f69cc&width=2000&userId=ef7369ff-db81-4bc2-8f76-6118bc457374&cache=v2"/>
 
 
